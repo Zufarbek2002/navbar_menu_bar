@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section id="navbar">
+        <div class="container navbar_section">
+            <ul>
+                <li class="active"><a href="#">
+                    <span class="icon">
+                        <i class="fa-solid fa-house" style="color: #000000;"></i>
+                    </span>
+                    <span class="text">Home</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon">
+                        <i class="fa-solid fa-user" style="color: #000000;"></i>
+                    </span>
+                    <span class="text">Profile</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon">
+                        <i class="fa-solid fa-comment" style="color: #000000;"></i>
+                    </span>
+                    <span class="text">Message</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon">
+                        <i class="fa-solid fa-camera" style="color: #000000;"></i>
+                    </span>
+                    <span class="text">Photos</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon">
+                        <i class="fa-solid fa-gear" style="color: #000000;"></i>
+                    </span>
+                    <span class="text">Settings</span>
+                </a></li>
+                <div class="indicator"></div>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        const list =  document.querySelectorAll('li')
+        function activeLink (){
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) => 
+        item.addEventListener('click', activeLink));
+    </script>
+    <script src="https://kit.fontawesome.com/f8ca3b2196.js" crossorigin="anonymous"></script>
+</body>
+</html>
